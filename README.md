@@ -1,6 +1,6 @@
 # FuProfile Unlocker
 
-[Simplified Chinese](README_CN.md)
+[简体中文](README_CN.md)
 
 A free desktop utility that creates eight Fujifilm-look Camera Matching DCP profiles for compatible non-Fujifilm RAW cameras. It reads the selected RAW, finds the exact Adobe Standard DCP in the user's local Lightroom/Camera Raw installation, generates and verifies eight profiles, and installs them in the user's CameraRaw profile directory.
 
