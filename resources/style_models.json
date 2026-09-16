@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "purpose": "Known Fujifilm models whose Adobe resources can indicate a Lightroom generation new enough for the eight-style set. This is a compatibility hint, not a source of camera-specific DCP files.",
+  "models": [
+    "Fujifilm GFX 100 II",
+    "Fujifilm GFX 100S II",
+    "Fujifilm GFX 100RF",
+    "Fujifilm X100VI",
+    "Fujifilm X-T50",
+    "Fujifilm X-M5",
+    "Fujifilm X-E5",
+    "Fujifilm X-T30 III"
+  ]
+}
+

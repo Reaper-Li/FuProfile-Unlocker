@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2613A3D3166B6F410056285A /* dng_jpeg_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2613A3CE166B6F410056285A /* dng_jpeg_image.cpp */; };
+		2613A3D4166B6F410056285A /* dng_ref_counted_block.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2613A3D0166B6F410056285A /* dng_ref_counted_block.cpp */; };
+		2632AC671D0845D500FA507A /* dng_big_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2632AC611D0845D500FA507A /* dng_big_table.cpp */; };
+		2632AC681D0845D500FA507A /* dng_safe_arithmetic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2632AC631D0845D500FA507A /* dng_safe_arithmetic.cpp */; };
+		2632AC691D0845D500FA507A /* dng_local_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2632AC651D0845D500FA507A /* dng_local_string.cpp */; };
+		26B99E640F397B9A00F1AE94 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26B99E630F397B9A00F1AE94 /* main.cpp */; };
+		26CD3020103709F20050ECDF /* dng_bad_pixels.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD3014103709F20050ECDF /* dng_bad_pixels.cpp */; };
+		26CD3021103709F20050ECDF /* dng_gain_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD3016103709F20050ECDF /* dng_gain_map.cpp */; };
+		26CD3022103709F20050ECDF /* dng_lens_correction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD3018103709F20050ECDF /* dng_lens_correction.cpp */; };
+		26CD3023103709F20050ECDF /* dng_misc_opcodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD301A103709F20050ECDF /* dng_misc_opcodes.cpp */; };
+		26CD3024103709F20050ECDF /* dng_opcode_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD301C103709F20050ECDF /* dng_opcode_list.cpp */; };
+		26CD3025103709F20050ECDF /* dng_opcodes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26CD301E103709F20050ECDF /* dng_opcodes.cpp */; };
+		26D6F3E50F371FCD00B96D04 /* dng_1d_function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F36B0F371FCD00B96D04 /* dng_1d_function.cpp */; };
+		26D6F3E60F371FCD00B96D04 /* dng_1d_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F36D0F371FCD00B96D04 /* dng_1d_table.cpp */; };
+		26D6F3E70F371FCD00B96D04 /* dng_abort_sniffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F36F0F371FCD00B96D04 /* dng_abort_sniffer.cpp */; };
+		26D6F3E80F371FCD00B96D04 /* dng_area_task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3710F371FCD00B96D04 /* dng_area_task.cpp */; };
+		26D6F3E90F371FCD00B96D04 /* dng_bottlenecks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3750F371FCD00B96D04 /* dng_bottlenecks.cpp */; };
+		26D6F3EA0F371FCD00B96D04 /* dng_camera_profile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3770F371FCD00B96D04 /* dng_camera_profile.cpp */; };
+		26D6F3EB0F371FCD00B96D04 /* dng_color_space.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F37A0F371FCD00B96D04 /* dng_color_space.cpp */; };
+		26D6F3EC0F371FCD00B96D04 /* dng_color_spec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F37C0F371FCD00B96D04 /* dng_color_spec.cpp */; };
+		26D6F3ED0F371FCD00B96D04 /* dng_date_time.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F37E0F371FCD00B96D04 /* dng_date_time.cpp */; };
+		26D6F3EE0F371FCD00B96D04 /* dng_exceptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3810F371FCD00B96D04 /* dng_exceptions.cpp */; };
+		26D6F3EF0F371FCD00B96D04 /* dng_exif.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3830F371FCD00B96D04 /* dng_exif.cpp */; };
+		26D6F3F00F371FCD00B96D04 /* dng_file_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3860F371FCD00B96D04 /* dng_file_stream.cpp */; };
+		26D6F3F10F371FCD00B96D04 /* dng_filter_task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3880F371FCD00B96D04 /* dng_filter_task.cpp */; };
+		26D6F3F20F371FCD00B96D04 /* dng_fingerprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F38A0F371FCD00B96D04 /* dng_fingerprint.cpp */; };
+		26D6F3F30F371FCD00B96D04 /* dng_globals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F38D0F371FCD00B96D04 /* dng_globals.cpp */; };
+		26D6F3F40F371FCD00B96D04 /* dng_host.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F38F0F371FCD00B96D04 /* dng_host.cpp */; };
+		26D6F3F50F371FCD00B96D04 /* dng_hue_sat_map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3910F371FCD00B96D04 /* dng_hue_sat_map.cpp */; };
+		26D6F3F60F371FCD00B96D04 /* dng_ifd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3930F371FCD00B96D04 /* dng_ifd.cpp */; };
+		26D6F3F70F371FCD00B96D04 /* dng_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3950F371FCD00B96D04 /* dng_image.cpp */; };
+		26D6F3F80F371FCD00B96D04 /* dng_image_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3970F371FCD00B96D04 /* dng_image_writer.cpp */; };
+		26D6F3F90F371FCD00B96D04 /* dng_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3990F371FCD00B96D04 /* dng_info.cpp */; };
+		26D6F3FA0F371FCD00B96D04 /* dng_iptc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F39B0F371FCD00B96D04 /* dng_iptc.cpp */; };
+		26D6F3FB0F371FCD00B96D04 /* dng_linearization_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F39D0F371FCD00B96D04 /* dng_linearization_info.cpp */; };
+		26D6F3FC0F371FCD00B96D04 /* dng_lossless_jpeg.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F39F0F371FCD00B96D04 /* dng_lossless_jpeg.cpp */; };
+		26D6F3FD0F371FCD00B96D04 /* dng_matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3A10F371FCD00B96D04 /* dng_matrix.cpp */; };
+		26D6F3FE0F371FCD00B96D04 /* dng_memory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3A30F371FCD00B96D04 /* dng_memory.cpp */; };
+		26D6F3FF0F371FCD00B96D04 /* dng_memory_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3A50F371FCD00B96D04 /* dng_memory_stream.cpp */; };
+		26D6F4000F371FCD00B96D04 /* dng_mosaic_info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3A70F371FCD00B96D04 /* dng_mosaic_info.cpp */; };
+		26D6F4010F371FCD00B96D04 /* dng_mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3A90F371FCD00B96D04 /* dng_mutex.cpp */; };
+		26D6F4020F371FCD00B96D04 /* dng_negative.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3AB0F371FCD00B96D04 /* dng_negative.cpp */; };
+		26D6F4030F371FCD00B96D04 /* dng_orientation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3AD0F371FCD00B96D04 /* dng_orientation.cpp */; };
+		26D6F4040F371FCD00B96D04 /* dng_parse_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3AF0F371FCD00B96D04 /* dng_parse_utils.cpp */; };
+		26D6F4050F371FCD00B96D04 /* dng_pixel_buffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3B10F371FCD00B96D04 /* dng_pixel_buffer.cpp */; };
+		26D6F4060F371FCD00B96D04 /* dng_point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3B30F371FCD00B96D04 /* dng_point.cpp */; };
+		26D6F4070F371FCD00B96D04 /* dng_preview.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3B50F371FCD00B96D04 /* dng_preview.cpp */; };
+		26D6F4080F371FCD00B96D04 /* dng_pthread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3B70F371FCD00B96D04 /* dng_pthread.cpp */; };
+		26D6F4090F371FCD00B96D04 /* dng_rational.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3B90F371FCD00B96D04 /* dng_rational.cpp */; };
+		26D6F40A0F371FCD00B96D04 /* dng_read_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3BB0F371FCD00B96D04 /* dng_read_image.cpp */; };
+		26D6F40B0F371FCD00B96D04 /* dng_rect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3BD0F371FCD00B96D04 /* dng_rect.cpp */; };
+		26D6F40C0F371FCD00B96D04 /* dng_reference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3BF0F371FCD00B96D04 /* dng_reference.cpp */; };
+		26D6F40D0F371FCD00B96D04 /* dng_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3C10F371FCD00B96D04 /* dng_render.cpp */; };
+		26D6F40E0F371FCD00B96D04 /* dng_resample.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3C30F371FCD00B96D04 /* dng_resample.cpp */; };
+		26D6F40F0F371FCD00B96D04 /* dng_shared.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3C60F371FCD00B96D04 /* dng_shared.cpp */; };
+		26D6F4100F371FCD00B96D04 /* dng_simple_image.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3C80F371FCD00B96D04 /* dng_simple_image.cpp */; };
+		26D6F4110F371FCD00B96D04 /* dng_spline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3CA0F371FCD00B96D04 /* dng_spline.cpp */; };
+		26D6F4120F371FCD00B96D04 /* dng_stream.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3CC0F371FCD00B96D04 /* dng_stream.cpp */; };
+		26D6F4130F371FCD00B96D04 /* dng_string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3CE0F371FCD00B96D04 /* dng_string.cpp */; };
+		26D6F4140F371FCD00B96D04 /* dng_string_list.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3D00F371FCD00B96D04 /* dng_string_list.cpp */; };
+		26D6F4150F371FCD00B96D04 /* dng_tag_types.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3D30F371FCD00B96D04 /* dng_tag_types.cpp */; };
+		26D6F4160F371FCD00B96D04 /* dng_temperature.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3D60F371FCD00B96D04 /* dng_temperature.cpp */; };
+		26D6F4170F371FCD00B96D04 /* dng_tile_iterator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3D80F371FCD00B96D04 /* dng_tile_iterator.cpp */; };
+		26D6F4180F371FCD00B96D04 /* dng_tone_curve.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3DA0F371FCD00B96D04 /* dng_tone_curve.cpp */; };
+		26D6F4190F371FCD00B96D04 /* dng_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3DD0F371FCD00B96D04 /* dng_utils.cpp */; };
+		26D6F41A0F371FCD00B96D04 /* dng_xmp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3DF0F371FCD00B96D04 /* dng_xmp.cpp */; };
+		26D6F41B0F371FCD00B96D04 /* dng_xmp_sdk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3E10F371FCD00B96D04 /* dng_xmp_sdk.cpp */; };
+		26D6F41C0F371FCD00B96D04 /* dng_xy_coord.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F3E30F371FCD00B96D04 /* dng_xy_coord.cpp */; };
+		26D6F41E0F371FFE00B96D04 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D6F41D0F371FFE00B96D04 /* Carbon.framework */; };
+		26D6F6030F375E8C00B96D04 /* xml_camera_profile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 26D6F6020F375E8C00B96D04 /* xml_camera_profile.cpp */; };
+		8DD76F6A0486A84900D96B5E /* dcpTool.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = C6859E8B029090EE04C91782 /* dcpTool.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8DD76F690486A84900D96B5E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 8;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				8DD76F6A0486A84900D96B5E /* dcpTool.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2613A3CE166B6F410056285A /* dng_jpeg_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_jpeg_image.cpp; path = dng_sdk/source/dng_jpeg_image.cpp; sourceTree = "<group>"; };
+		2613A3CF166B6F410056285A /* dng_jpeg_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_jpeg_image.h; path = dng_sdk/source/dng_jpeg_image.h; sourceTree = "<group>"; };
+		2613A3D0166B6F410056285A /* dng_ref_counted_block.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_ref_counted_block.cpp; path = dng_sdk/source/dng_ref_counted_block.cpp; sourceTree = "<group>"; };
+		2613A3D1166B6F410056285A /* dng_ref_counted_block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_ref_counted_block.h; path = dng_sdk/source/dng_ref_counted_block.h; sourceTree = "<group>"; };
+		2613A3D2166B6F410056285A /* dng_uncopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_uncopyable.h; path = dng_sdk/source/dng_uncopyable.h; sourceTree = "<group>"; };
+		2623F32D23096E5F00A8D000 /* dng_simd_type.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_simd_type.h; path = dng_sdk/source/dng_simd_type.h; sourceTree = "<group>"; };
+		2632AC611D0845D500FA507A /* dng_big_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_big_table.cpp; path = dng_sdk/source/dng_big_table.cpp; sourceTree = "<group>"; };
+		2632AC621D0845D500FA507A /* dng_big_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_big_table.h; path = dng_sdk/source/dng_big_table.h; sourceTree = "<group>"; };
+		2632AC631D0845D500FA507A /* dng_safe_arithmetic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_safe_arithmetic.cpp; path = dng_sdk/source/dng_safe_arithmetic.cpp; sourceTree = "<group>"; };
+		2632AC641D0845D500FA507A /* dng_safe_arithmetic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_safe_arithmetic.h; path = dng_sdk/source/dng_safe_arithmetic.h; sourceTree = "<group>"; };
+		2632AC651D0845D500FA507A /* dng_local_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_local_string.cpp; path = dng_sdk/source/dng_local_string.cpp; sourceTree = "<group>"; };
+		2632AC661D0845D500FA507A /* dng_local_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_local_string.h; path = dng_sdk/source/dng_local_string.h; sourceTree = "<group>"; };
+		266DDAD01DBCB9C1000EAD66 /* XMPStub.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = XMPStub.hpp; path = XMPStub/include/XMPStub.hpp; sourceTree = "<group>"; };
+		266DDAD11DBCB9C1000EAD66 /* XMP.incl_cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = XMP.incl_cpp; path = XMPStub/include/XMP.incl_cpp; sourceTree = "<group>"; };
+		26B99E630F397B9A00F1AE94 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		26CD3014103709F20050ECDF /* dng_bad_pixels.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_bad_pixels.cpp; path = dng_sdk/source/dng_bad_pixels.cpp; sourceTree = "<group>"; };
+		26CD3015103709F20050ECDF /* dng_bad_pixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_bad_pixels.h; path = dng_sdk/source/dng_bad_pixels.h; sourceTree = "<group>"; };
+		26CD3016103709F20050ECDF /* dng_gain_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_gain_map.cpp; path = dng_sdk/source/dng_gain_map.cpp; sourceTree = "<group>"; };
+		26CD3017103709F20050ECDF /* dng_gain_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_gain_map.h; path = dng_sdk/source/dng_gain_map.h; sourceTree = "<group>"; };
+		26CD3018103709F20050ECDF /* dng_lens_correction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_lens_correction.cpp; path = dng_sdk/source/dng_lens_correction.cpp; sourceTree = "<group>"; };
+		26CD3019103709F20050ECDF /* dng_lens_correction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_lens_correction.h; path = dng_sdk/source/dng_lens_correction.h; sourceTree = "<group>"; };
+		26CD301A103709F20050ECDF /* dng_misc_opcodes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_misc_opcodes.cpp; path = dng_sdk/source/dng_misc_opcodes.cpp; sourceTree = "<group>"; };
+		26CD301B103709F20050ECDF /* dng_misc_opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_misc_opcodes.h; path = dng_sdk/source/dng_misc_opcodes.h; sourceTree = "<group>"; };
+		26CD301C103709F20050ECDF /* dng_opcode_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_opcode_list.cpp; path = dng_sdk/source/dng_opcode_list.cpp; sourceTree = "<group>"; };
+		26CD301D103709F20050ECDF /* dng_opcode_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_opcode_list.h; path = dng_sdk/source/dng_opcode_list.h; sourceTree = "<group>"; };
+		26CD301E103709F20050ECDF /* dng_opcodes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_opcodes.cpp; path = dng_sdk/source/dng_opcodes.cpp; sourceTree = "<group>"; };
+		26CD301F103709F20050ECDF /* dng_opcodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_opcodes.h; path = dng_sdk/source/dng_opcodes.h; sourceTree = "<group>"; };
+		26D6F36B0F371FCD00B96D04 /* dng_1d_function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_1d_function.cpp; path = dng_sdk/source/dng_1d_function.cpp; sourceTree = "<group>"; };
+		26D6F36C0F371FCD00B96D04 /* dng_1d_function.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_1d_function.h; path = dng_sdk/source/dng_1d_function.h; sourceTree = "<group>"; };
+		26D6F36D0F371FCD00B96D04 /* dng_1d_table.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_1d_table.cpp; path = dng_sdk/source/dng_1d_table.cpp; sourceTree = "<group>"; };
+		26D6F36E0F371FCD00B96D04 /* dng_1d_table.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_1d_table.h; path = dng_sdk/source/dng_1d_table.h; sourceTree = "<group>"; };
+		26D6F36F0F371FCD00B96D04 /* dng_abort_sniffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_abort_sniffer.cpp; path = dng_sdk/source/dng_abort_sniffer.cpp; sourceTree = "<group>"; };
+		26D6F3700F371FCD00B96D04 /* dng_abort_sniffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_abort_sniffer.h; path = dng_sdk/source/dng_abort_sniffer.h; sourceTree = "<group>"; };
+		26D6F3710F371FCD00B96D04 /* dng_area_task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_area_task.cpp; path = dng_sdk/source/dng_area_task.cpp; sourceTree = "<group>"; };
+		26D6F3720F371FCD00B96D04 /* dng_area_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_area_task.h; path = dng_sdk/source/dng_area_task.h; sourceTree = "<group>"; };
+		26D6F3730F371FCD00B96D04 /* dng_assertions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_assertions.h; path = dng_sdk/source/dng_assertions.h; sourceTree = "<group>"; };
+		26D6F3740F371FCD00B96D04 /* dng_auto_ptr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_auto_ptr.h; path = dng_sdk/source/dng_auto_ptr.h; sourceTree = "<group>"; };
+		26D6F3750F371FCD00B96D04 /* dng_bottlenecks.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_bottlenecks.cpp; path = dng_sdk/source/dng_bottlenecks.cpp; sourceTree = "<group>"; };
+		26D6F3760F371FCD00B96D04 /* dng_bottlenecks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_bottlenecks.h; path = dng_sdk/source/dng_bottlenecks.h; sourceTree = "<group>"; };
+		26D6F3770F371FCD00B96D04 /* dng_camera_profile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_camera_profile.cpp; path = dng_sdk/source/dng_camera_profile.cpp; sourceTree = "<group>"; };
+		26D6F3780F371FCD00B96D04 /* dng_camera_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_camera_profile.h; path = dng_sdk/source/dng_camera_profile.h; sourceTree = "<group>"; };
+		26D6F3790F371FCD00B96D04 /* dng_classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_classes.h; path = dng_sdk/source/dng_classes.h; sourceTree = "<group>"; };
+		26D6F37A0F371FCD00B96D04 /* dng_color_space.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_color_space.cpp; path = dng_sdk/source/dng_color_space.cpp; sourceTree = "<group>"; };
+		26D6F37B0F371FCD00B96D04 /* dng_color_space.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_color_space.h; path = dng_sdk/source/dng_color_space.h; sourceTree = "<group>"; };
+		26D6F37C0F371FCD00B96D04 /* dng_color_spec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_color_spec.cpp; path = dng_sdk/source/dng_color_spec.cpp; sourceTree = "<group>"; };
+		26D6F37D0F371FCD00B96D04 /* dng_color_spec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_color_spec.h; path = dng_sdk/source/dng_color_spec.h; sourceTree = "<group>"; };
+		26D6F37E0F371FCD00B96D04 /* dng_date_time.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_date_time.cpp; path = dng_sdk/source/dng_date_time.cpp; sourceTree = "<group>"; };
+		26D6F37F0F371FCD00B96D04 /* dng_date_time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_date_time.h; path = dng_sdk/source/dng_date_time.h; sourceTree = "<group>"; };
+		26D6F3800F371FCD00B96D04 /* dng_errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_errors.h; path = dng_sdk/source/dng_errors.h; sourceTree = "<group>"; };
+		26D6F3810F371FCD00B96D04 /* dng_exceptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_exceptions.cpp; path = dng_sdk/source/dng_exceptions.cpp; sourceTree = "<group>"; };
+		26D6F3820F371FCD00B96D04 /* dng_exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_exceptions.h; path = dng_sdk/source/dng_exceptions.h; sourceTree = "<group>"; };
+		26D6F3830F371FCD00B96D04 /* dng_exif.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_exif.cpp; path = dng_sdk/source/dng_exif.cpp; sourceTree = "<group>"; };
+		26D6F3840F371FCD00B96D04 /* dng_exif.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_exif.h; path = dng_sdk/source/dng_exif.h; sourceTree = "<group>"; };
+		26D6F3850F371FCD00B96D04 /* dng_fast_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_fast_module.h; path = dng_sdk/source/dng_fast_module.h; sourceTree = "<group>"; };
+		26D6F3860F371FCD00B96D04 /* dng_file_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_file_stream.cpp; path = dng_sdk/source/dng_file_stream.cpp; sourceTree = "<group>"; };
+		26D6F3870F371FCD00B96D04 /* dng_file_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_file_stream.h; path = dng_sdk/source/dng_file_stream.h; sourceTree = "<group>"; };
+		26D6F3880F371FCD00B96D04 /* dng_filter_task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_filter_task.cpp; path = dng_sdk/source/dng_filter_task.cpp; sourceTree = "<group>"; };
+		26D6F3890F371FCD00B96D04 /* dng_filter_task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_filter_task.h; path = dng_sdk/source/dng_filter_task.h; sourceTree = "<group>"; };
+		26D6F38A0F371FCD00B96D04 /* dng_fingerprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_fingerprint.cpp; path = dng_sdk/source/dng_fingerprint.cpp; sourceTree = "<group>"; };
+		26D6F38B0F371FCD00B96D04 /* dng_fingerprint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_fingerprint.h; path = dng_sdk/source/dng_fingerprint.h; sourceTree = "<group>"; };
+		26D6F38C0F371FCD00B96D04 /* dng_flags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_flags.h; path = dng_sdk/source/dng_flags.h; sourceTree = "<group>"; };
+		26D6F38D0F371FCD00B96D04 /* dng_globals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_globals.cpp; path = dng_sdk/source/dng_globals.cpp; sourceTree = "<group>"; };
+		26D6F38E0F371FCD00B96D04 /* dng_globals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_globals.h; path = dng_sdk/source/dng_globals.h; sourceTree = "<group>"; };
+		26D6F38F0F371FCD00B96D04 /* dng_host.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_host.cpp; path = dng_sdk/source/dng_host.cpp; sourceTree = "<group>"; };
+		26D6F3900F371FCD00B96D04 /* dng_host.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_host.h; path = dng_sdk/source/dng_host.h; sourceTree = "<group>"; };
+		26D6F3910F371FCD00B96D04 /* dng_hue_sat_map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_hue_sat_map.cpp; path = dng_sdk/source/dng_hue_sat_map.cpp; sourceTree = "<group>"; };
+		26D6F3920F371FCD00B96D04 /* dng_hue_sat_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_hue_sat_map.h; path = dng_sdk/source/dng_hue_sat_map.h; sourceTree = "<group>"; };
+		26D6F3930F371FCD00B96D04 /* dng_ifd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_ifd.cpp; path = dng_sdk/source/dng_ifd.cpp; sourceTree = "<group>"; };
+		26D6F3940F371FCD00B96D04 /* dng_ifd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_ifd.h; path = dng_sdk/source/dng_ifd.h; sourceTree = "<group>"; };
+		26D6F3950F371FCD00B96D04 /* dng_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_image.cpp; path = dng_sdk/source/dng_image.cpp; sourceTree = "<group>"; };
+		26D6F3960F371FCD00B96D04 /* dng_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_image.h; path = dng_sdk/source/dng_image.h; sourceTree = "<group>"; };
+		26D6F3970F371FCD00B96D04 /* dng_image_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_image_writer.cpp; path = dng_sdk/source/dng_image_writer.cpp; sourceTree = "<group>"; };
+		26D6F3980F371FCD00B96D04 /* dng_image_writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_image_writer.h; path = dng_sdk/source/dng_image_writer.h; sourceTree = "<group>"; };
+		26D6F3990F371FCD00B96D04 /* dng_info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_info.cpp; path = dng_sdk/source/dng_info.cpp; sourceTree = "<group>"; };
+		26D6F39A0F371FCD00B96D04 /* dng_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_info.h; path = dng_sdk/source/dng_info.h; sourceTree = "<group>"; };
+		26D6F39B0F371FCD00B96D04 /* dng_iptc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_iptc.cpp; path = dng_sdk/source/dng_iptc.cpp; sourceTree = "<group>"; };
+		26D6F39C0F371FCD00B96D04 /* dng_iptc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_iptc.h; path = dng_sdk/source/dng_iptc.h; sourceTree = "<group>"; };
+		26D6F39D0F371FCD00B96D04 /* dng_linearization_info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_linearization_info.cpp; path = dng_sdk/source/dng_linearization_info.cpp; sourceTree = "<group>"; };
+		26D6F39E0F371FCD00B96D04 /* dng_linearization_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_linearization_info.h; path = dng_sdk/source/dng_linearization_info.h; sourceTree = "<group>"; };
+		26D6F39F0F371FCD00B96D04 /* dng_lossless_jpeg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_lossless_jpeg.cpp; path = dng_sdk/source/dng_lossless_jpeg.cpp; sourceTree = "<group>"; };
+		26D6F3A00F371FCD00B96D04 /* dng_lossless_jpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_lossless_jpeg.h; path = dng_sdk/source/dng_lossless_jpeg.h; sourceTree = "<group>"; };
+		26D6F3A10F371FCD00B96D04 /* dng_matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_matrix.cpp; path = dng_sdk/source/dng_matrix.cpp; sourceTree = "<group>"; };
+		26D6F3A20F371FCD00B96D04 /* dng_matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_matrix.h; path = dng_sdk/source/dng_matrix.h; sourceTree = "<group>"; };
+		26D6F3A30F371FCD00B96D04 /* dng_memory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_memory.cpp; path = dng_sdk/source/dng_memory.cpp; sourceTree = "<group>"; };
+		26D6F3A40F371FCD00B96D04 /* dng_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_memory.h; path = dng_sdk/source/dng_memory.h; sourceTree = "<group>"; };
+		26D6F3A50F371FCD00B96D04 /* dng_memory_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_memory_stream.cpp; path = dng_sdk/source/dng_memory_stream.cpp; sourceTree = "<group>"; };
+		26D6F3A60F371FCD00B96D04 /* dng_memory_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_memory_stream.h; path = dng_sdk/source/dng_memory_stream.h; sourceTree = "<group>"; };
+		26D6F3A70F371FCD00B96D04 /* dng_mosaic_info.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_mosaic_info.cpp; path = dng_sdk/source/dng_mosaic_info.cpp; sourceTree = "<group>"; };
+		26D6F3A80F371FCD00B96D04 /* dng_mosaic_info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_mosaic_info.h; path = dng_sdk/source/dng_mosaic_info.h; sourceTree = "<group>"; };
+		26D6F3A90F371FCD00B96D04 /* dng_mutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_mutex.cpp; path = dng_sdk/source/dng_mutex.cpp; sourceTree = "<group>"; };
+		26D6F3AA0F371FCD00B96D04 /* dng_mutex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_mutex.h; path = dng_sdk/source/dng_mutex.h; sourceTree = "<group>"; };
+		26D6F3AB0F371FCD00B96D04 /* dng_negative.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_negative.cpp; path = dng_sdk/source/dng_negative.cpp; sourceTree = "<group>"; };
+		26D6F3AC0F371FCD00B96D04 /* dng_negative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_negative.h; path = dng_sdk/source/dng_negative.h; sourceTree = "<group>"; };
+		26D6F3AD0F371FCD00B96D04 /* dng_orientation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_orientation.cpp; path = dng_sdk/source/dng_orientation.cpp; sourceTree = "<group>"; };
+		26D6F3AE0F371FCD00B96D04 /* dng_orientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_orientation.h; path = dng_sdk/source/dng_orientation.h; sourceTree = "<group>"; };
+		26D6F3AF0F371FCD00B96D04 /* dng_parse_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_parse_utils.cpp; path = dng_sdk/source/dng_parse_utils.cpp; sourceTree = "<group>"; };
+		26D6F3B00F371FCD00B96D04 /* dng_parse_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_parse_utils.h; path = dng_sdk/source/dng_parse_utils.h; sourceTree = "<group>"; };
+		26D6F3B10F371FCD00B96D04 /* dng_pixel_buffer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_pixel_buffer.cpp; path = dng_sdk/source/dng_pixel_buffer.cpp; sourceTree = "<group>"; };
+		26D6F3B20F371FCD00B96D04 /* dng_pixel_buffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_pixel_buffer.h; path = dng_sdk/source/dng_pixel_buffer.h; sourceTree = "<group>"; };
+		26D6F3B30F371FCD00B96D04 /* dng_point.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_point.cpp; path = dng_sdk/source/dng_point.cpp; sourceTree = "<group>"; };
+		26D6F3B40F371FCD00B96D04 /* dng_point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_point.h; path = dng_sdk/source/dng_point.h; sourceTree = "<group>"; };
+		26D6F3B50F371FCD00B96D04 /* dng_preview.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_preview.cpp; path = dng_sdk/source/dng_preview.cpp; sourceTree = "<group>"; };
+		26D6F3B60F371FCD00B96D04 /* dng_preview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_preview.h; path = dng_sdk/source/dng_preview.h; sourceTree = "<group>"; };
+		26D6F3B70F371FCD00B96D04 /* dng_pthread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_pthread.cpp; path = dng_sdk/source/dng_pthread.cpp; sourceTree = "<group>"; };
+		26D6F3B80F371FCD00B96D04 /* dng_pthread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_pthread.h; path = dng_sdk/source/dng_pthread.h; sourceTree = "<group>"; };
+		26D6F3B90F371FCD00B96D04 /* dng_rational.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_rational.cpp; path = dng_sdk/source/dng_rational.cpp; sourceTree = "<group>"; };
+		26D6F3BA0F371FCD00B96D04 /* dng_rational.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_rational.h; path = dng_sdk/source/dng_rational.h; sourceTree = "<group>"; };
+		26D6F3BB0F371FCD00B96D04 /* dng_read_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_read_image.cpp; path = dng_sdk/source/dng_read_image.cpp; sourceTree = "<group>"; };
+		26D6F3BC0F371FCD00B96D04 /* dng_read_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_read_image.h; path = dng_sdk/source/dng_read_image.h; sourceTree = "<group>"; };
+		26D6F3BD0F371FCD00B96D04 /* dng_rect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_rect.cpp; path = dng_sdk/source/dng_rect.cpp; sourceTree = "<group>"; };
+		26D6F3BE0F371FCD00B96D04 /* dng_rect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_rect.h; path = dng_sdk/source/dng_rect.h; sourceTree = "<group>"; };
+		26D6F3BF0F371FCD00B96D04 /* dng_reference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_reference.cpp; path = dng_sdk/source/dng_reference.cpp; sourceTree = "<group>"; };
+		26D6F3C00F371FCD00B96D04 /* dng_reference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_reference.h; path = dng_sdk/source/dng_reference.h; sourceTree = "<group>"; };
+		26D6F3C10F371FCD00B96D04 /* dng_render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_render.cpp; path = dng_sdk/source/dng_render.cpp; sourceTree = "<group>"; };
+		26D6F3C20F371FCD00B96D04 /* dng_render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_render.h; path = dng_sdk/source/dng_render.h; sourceTree = "<group>"; };
+		26D6F3C30F371FCD00B96D04 /* dng_resample.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_resample.cpp; path = dng_sdk/source/dng_resample.cpp; sourceTree = "<group>"; };
+		26D6F3C40F371FCD00B96D04 /* dng_resample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_resample.h; path = dng_sdk/source/dng_resample.h; sourceTree = "<group>"; };
+		26D6F3C50F371FCD00B96D04 /* dng_sdk_limits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_sdk_limits.h; path = dng_sdk/source/dng_sdk_limits.h; sourceTree = "<group>"; };
+		26D6F3C60F371FCD00B96D04 /* dng_shared.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_shared.cpp; path = dng_sdk/source/dng_shared.cpp; sourceTree = "<group>"; };
+		26D6F3C70F371FCD00B96D04 /* dng_shared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_shared.h; path = dng_sdk/source/dng_shared.h; sourceTree = "<group>"; };
+		26D6F3C80F371FCD00B96D04 /* dng_simple_image.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_simple_image.cpp; path = dng_sdk/source/dng_simple_image.cpp; sourceTree = "<group>"; };
+		26D6F3C90F371FCD00B96D04 /* dng_simple_image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_simple_image.h; path = dng_sdk/source/dng_simple_image.h; sourceTree = "<group>"; };
+		26D6F3CA0F371FCD00B96D04 /* dng_spline.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_spline.cpp; path = dng_sdk/source/dng_spline.cpp; sourceTree = "<group>"; };
+		26D6F3CB0F371FCD00B96D04 /* dng_spline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_spline.h; path = dng_sdk/source/dng_spline.h; sourceTree = "<group>"; };
+		26D6F3CC0F371FCD00B96D04 /* dng_stream.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_stream.cpp; path = dng_sdk/source/dng_stream.cpp; sourceTree = "<group>"; };
+		26D6F3CD0F371FCD00B96D04 /* dng_stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_stream.h; path = dng_sdk/source/dng_stream.h; sourceTree = "<group>"; };
+		26D6F3CE0F371FCD00B96D04 /* dng_string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_string.cpp; path = dng_sdk/source/dng_string.cpp; sourceTree = "<group>"; };
+		26D6F3CF0F371FCD00B96D04 /* dng_string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_string.h; path = dng_sdk/source/dng_string.h; sourceTree = "<group>"; };
+		26D6F3D00F371FCD00B96D04 /* dng_string_list.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_string_list.cpp; path = dng_sdk/source/dng_string_list.cpp; sourceTree = "<group>"; };
+		26D6F3D10F371FCD00B96D04 /* dng_string_list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_string_list.h; path = dng_sdk/source/dng_string_list.h; sourceTree = "<group>"; };
+		26D6F3D20F371FCD00B96D04 /* dng_tag_codes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_tag_codes.h; path = dng_sdk/source/dng_tag_codes.h; sourceTree = "<group>"; };
+		26D6F3D30F371FCD00B96D04 /* dng_tag_types.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_tag_types.cpp; path = dng_sdk/source/dng_tag_types.cpp; sourceTree = "<group>"; };
+		26D6F3D40F371FCD00B96D04 /* dng_tag_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_tag_types.h; path = dng_sdk/source/dng_tag_types.h; sourceTree = "<group>"; };
+		26D6F3D50F371FCD00B96D04 /* dng_tag_values.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_tag_values.h; path = dng_sdk/source/dng_tag_values.h; sourceTree = "<group>"; };
+		26D6F3D60F371FCD00B96D04 /* dng_temperature.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_temperature.cpp; path = dng_sdk/source/dng_temperature.cpp; sourceTree = "<group>"; };
+		26D6F3D70F371FCD00B96D04 /* dng_temperature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_temperature.h; path = dng_sdk/source/dng_temperature.h; sourceTree = "<group>"; };
+		26D6F3D80F371FCD00B96D04 /* dng_tile_iterator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_tile_iterator.cpp; path = dng_sdk/source/dng_tile_iterator.cpp; sourceTree = "<group>"; };
+		26D6F3D90F371FCD00B96D04 /* dng_tile_iterator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_tile_iterator.h; path = dng_sdk/source/dng_tile_iterator.h; sourceTree = "<group>"; };
+		26D6F3DA0F371FCD00B96D04 /* dng_tone_curve.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_tone_curve.cpp; path = dng_sdk/source/dng_tone_curve.cpp; sourceTree = "<group>"; };
+		26D6F3DB0F371FCD00B96D04 /* dng_tone_curve.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_tone_curve.h; path = dng_sdk/source/dng_tone_curve.h; sourceTree = "<group>"; };
+		26D6F3DC0F371FCD00B96D04 /* dng_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_types.h; path = dng_sdk/source/dng_types.h; sourceTree = "<group>"; };
+		26D6F3DD0F371FCD00B96D04 /* dng_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_utils.cpp; path = dng_sdk/source/dng_utils.cpp; sourceTree = "<group>"; };
+		26D6F3DE0F371FCD00B96D04 /* dng_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_utils.h; path = dng_sdk/source/dng_utils.h; sourceTree = "<group>"; };
+		26D6F3DF0F371FCD00B96D04 /* dng_xmp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_xmp.cpp; path = dng_sdk/source/dng_xmp.cpp; sourceTree = "<group>"; };
+		26D6F3E00F371FCD00B96D04 /* dng_xmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_xmp.h; path = dng_sdk/source/dng_xmp.h; sourceTree = "<group>"; };
+		26D6F3E10F371FCD00B96D04 /* dng_xmp_sdk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_xmp_sdk.cpp; path = dng_sdk/source/dng_xmp_sdk.cpp; sourceTree = "<group>"; };
+		26D6F3E20F371FCD00B96D04 /* dng_xmp_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_xmp_sdk.h; path = dng_sdk/source/dng_xmp_sdk.h; sourceTree = "<group>"; };
+		26D6F3E30F371FCD00B96D04 /* dng_xy_coord.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dng_xy_coord.cpp; path = dng_sdk/source/dng_xy_coord.cpp; sourceTree = "<group>"; };
+		26D6F3E40F371FCD00B96D04 /* dng_xy_coord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dng_xy_coord.h; path = dng_sdk/source/dng_xy_coord.h; sourceTree = "<group>"; };
+		26D6F41D0F371FFE00B96D04 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		26D6F6010F375E8C00B96D04 /* xml_camera_profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xml_camera_profile.h; sourceTree = "<group>"; };
+		26D6F6020F375E8C00B96D04 /* xml_camera_profile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = xml_camera_profile.cpp; sourceTree = "<group>"; };
+		8DD76F6C0486A84900D96B5E /* dcpTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = dcpTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6859E8B029090EE04C91782 /* dcpTool.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = dcpTool.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8DD76F660486A84900D96B5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D6F41E0F371FFE00B96D04 /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* dcpTool */ = {
+			isa = PBXGroup;
+			children = (
+				26B99E630F397B9A00F1AE94 /* main.cpp */,
+				26D6F41D0F371FFE00B96D04 /* Carbon.framework */,
+				08FB7795FE84155DC02AAC07 /* Source */,
+				C6859E8C029090F304C91782 /* Documentation */,
+				1AB674ADFE9D54B511CA2CBB /* Products */,
+				26D6F6010F375E8C00B96D04 /* xml_camera_profile.h */,
+				26D6F6020F375E8C00B96D04 /* xml_camera_profile.cpp */,
+			);
+			name = dcpTool;
+			sourceTree = "<group>";
+		};
+		08FB7795FE84155DC02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				2623F32D23096E5F00A8D000 /* dng_simd_type.h */,
+				266DDAD01DBCB9C1000EAD66 /* XMPStub.hpp */,
+				266DDAD11DBCB9C1000EAD66 /* XMP.incl_cpp */,
+				2632AC611D0845D500FA507A /* dng_big_table.cpp */,
+				2632AC621D0845D500FA507A /* dng_big_table.h */,
+				2632AC631D0845D500FA507A /* dng_safe_arithmetic.cpp */,
+				2632AC641D0845D500FA507A /* dng_safe_arithmetic.h */,
+				2632AC651D0845D500FA507A /* dng_local_string.cpp */,
+				2632AC661D0845D500FA507A /* dng_local_string.h */,
+				2613A3CE166B6F410056285A /* dng_jpeg_image.cpp */,
+				2613A3CF166B6F410056285A /* dng_jpeg_image.h */,
+				2613A3D0166B6F410056285A /* dng_ref_counted_block.cpp */,
+				2613A3D1166B6F410056285A /* dng_ref_counted_block.h */,
+				2613A3D2166B6F410056285A /* dng_uncopyable.h */,
+				26CD3014103709F20050ECDF /* dng_bad_pixels.cpp */,
+				26CD3015103709F20050ECDF /* dng_bad_pixels.h */,
+				26CD3016103709F20050ECDF /* dng_gain_map.cpp */,
+				26CD3017103709F20050ECDF /* dng_gain_map.h */,
+				26CD3018103709F20050ECDF /* dng_lens_correction.cpp */,
+				26CD3019103709F20050ECDF /* dng_lens_correction.h */,
+				26CD301A103709F20050ECDF /* dng_misc_opcodes.cpp */,
+				26CD301B103709F20050ECDF /* dng_misc_opcodes.h */,
+				26CD301C103709F20050ECDF /* dng_opcode_list.cpp */,
+				26CD301D103709F20050ECDF /* dng_opcode_list.h */,
+				26CD301E103709F20050ECDF /* dng_opcodes.cpp */,
+				26CD301F103709F20050ECDF /* dng_opcodes.h */,
+				26D6F36B0F371FCD00B96D04 /* dng_1d_function.cpp */,
+				26D6F36C0F371FCD00B96D04 /* dng_1d_function.h */,
+				26D6F36D0F371FCD00B96D04 /* dng_1d_table.cpp */,
+				26D6F36E0F371FCD00B96D04 /* dng_1d_table.h */,
+				26D6F36F0F371FCD00B96D04 /* dng_abort_sniffer.cpp */,
+				26D6F3700F371FCD00B96D04 /* dng_abort_sniffer.h */,
+				26D6F3710F371FCD00B96D04 /* dng_area_task.cpp */,
+				26D6F3720F371FCD00B96D04 /* dng_area_task.h */,
+				26D6F3730F371FCD00B96D04 /* dng_assertions.h */,
+				26D6F3740F371FCD00B96D04 /* dng_auto_ptr.h */,
+				26D6F3750F371FCD00B96D04 /* dng_bottlenecks.cpp */,
+				26D6F3760F371FCD00B96D04 /* dng_bottlenecks.h */,
+				26D6F3770F371FCD00B96D04 /* dng_camera_profile.cpp */,
+				26D6F3780F371FCD00B96D04 /* dng_camera_profile.h */,
+				26D6F3790F371FCD00B96D04 /* dng_classes.h */,
+				26D6F37A0F371FCD00B96D04 /* dng_color_space.cpp */,
+				26D6F37B0F371FCD00B96D04 /* dng_color_space.h */,
+				26D6F37C0F371FCD00B96D04 /* dng_color_spec.cpp */,
+				26D6F37D0F371FCD00B96D04 /* dng_color_spec.h */,
+				26D6F37E0F371FCD00B96D04 /* dng_date_time.cpp */,
+				26D6F37F0F371FCD00B96D04 /* dng_date_time.h */,
+				26D6F3800F371FCD00B96D04 /* dng_errors.h */,
+				26D6F3810F371FCD00B96D04 /* dng_exceptions.cpp */,
+				26D6F3820F371FCD00B96D04 /* dng_exceptions.h */,
+				26D6F3830F371FCD00B96D04 /* dng_exif.cpp */,
+				26D6F3840F371FCD00B96D04 /* dng_exif.h */,
+				26D6F3850F371FCD00B96D04 /* dng_fast_module.h */,
+				26D6F3860F371FCD00B96D04 /* dng_file_stream.cpp */,
+				26D6F3870F371FCD00B96D04 /* dng_file_stream.h */,
+				26D6F3880F371FCD00B96D04 /* dng_filter_task.cpp */,
+				26D6F3890F371FCD00B96D04 /* dng_filter_task.h */,
+				26D6F38A0F371FCD00B96D04 /* dng_fingerprint.cpp */,
+				26D6F38B0F371FCD00B96D04 /* dng_fingerprint.h */,
+				26D6F38C0F371FCD00B96D04 /* dng_flags.h */,
+				26D6F38D0F371FCD00B96D04 /* dng_globals.cpp */,
+				26D6F38E0F371FCD00B96D04 /* dng_globals.h */,
+				26D6F38F0F371FCD00B96D04 /* dng_host.cpp */,
+				26D6F3900F371FCD00B96D04 /* dng_host.h */,
+				26D6F3910F371FCD00B96D04 /* dng_hue_sat_map.cpp */,
+				26D6F3920F371FCD00B96D04 /* dng_hue_sat_map.h */,
+				26D6F3930F371FCD00B96D04 /* dng_ifd.cpp */,
+				26D6F3940F371FCD00B96D04 /* dng_ifd.h */,
+				26D6F3950F371FCD00B96D04 /* dng_image.cpp */,
+				26D6F3960F371FCD00B96D04 /* dng_image.h */,
+				26D6F3970F371FCD00B96D04 /* dng_image_writer.cpp */,
+				26D6F3980F371FCD00B96D04 /* dng_image_writer.h */,
+				26D6F3990F371FCD00B96D04 /* dng_info.cpp */,
+				26D6F39A0F371FCD00B96D04 /* dng_info.h */,
+				26D6F39B0F371FCD00B96D04 /* dng_iptc.cpp */,
+				26D6F39C0F371FCD00B96D04 /* dng_iptc.h */,
+				26D6F39D0F371FCD00B96D04 /* dng_linearization_info.cpp */,
+				26D6F39E0F371FCD00B96D04 /* dng_linearization_info.h */,
+				26D6F39F0F371FCD00B96D04 /* dng_lossless_jpeg.cpp */,
+				26D6F3A00F371FCD00B96D04 /* dng_lossless_jpeg.h */,
+				26D6F3A10F371FCD00B96D04 /* dng_matrix.cpp */,
+				26D6F3A20F371FCD00B96D04 /* dng_matrix.h */,
+				26D6F3A30F371FCD00B96D04 /* dng_memory.cpp */,
+				26D6F3A40F371FCD00B96D04 /* dng_memory.h */,
+				26D6F3A50F371FCD00B96D04 /* dng_memory_stream.cpp */,
+				26D6F3A60F371FCD00B96D04 /* dng_memory_stream.h */,
+				26D6F3A70F371FCD00B96D04 /* dng_mosaic_info.cpp */,
+				26D6F3A80F371FCD00B96D04 /* dng_mosaic_info.h */,
+				26D6F3A90F371FCD00B96D04 /* dng_mutex.cpp */,
+				26D6F3AA0F371FCD00B96D04 /* dng_mutex.h */,
+				26D6F3AB0F371FCD00B96D04 /* dng_negative.cpp */,
+				26D6F3AC0F371FCD00B96D04 /* dng_negative.h */,
+				26D6F3AD0F371FCD00B96D04 /* dng_orientation.cpp */,
+				26D6F3AE0F371FCD00B96D04 /* dng_orientation.h */,
+				26D6F3AF0F371FCD00B96D04 /* dng_parse_utils.cpp */,
+				26D6F3B00F371FCD00B96D04 /* dng_parse_utils.h */,
+				26D6F3B10F371FCD00B96D04 /* dng_pixel_buffer.cpp */,
+				26D6F3B20F371FCD00B96D04 /* dng_pixel_buffer.h */,
+				26D6F3B30F371FCD00B96D04 /* dng_point.cpp */,
+				26D6F3B40F371FCD00B96D04 /* dng_point.h */,
+				26D6F3B50F371FCD00B96D04 /* dng_preview.cpp */,
+				26D6F3B60F371FCD00B96D04 /* dng_preview.h */,
+				26D6F3B70F371FCD00B96D04 /* dng_pthread.cpp */,
+				26D6F3B80F371FCD00B96D04 /* dng_pthread.h */,
+				26D6F3B90F371FCD00B96D04 /* dng_rational.cpp */,
+				26D6F3BA0F371FCD00B96D04 /* dng_rational.h */,
+				26D6F3BB0F371FCD00B96D04 /* dng_read_image.cpp */,
+				26D6F3BC0F371FCD00B96D04 /* dng_read_image.h */,
+				26D6F3BD0F371FCD00B96D04 /* dng_rect.cpp */,
+				26D6F3BE0F371FCD00B96D04 /* dng_rect.h */,
+				26D6F3BF0F371FCD00B96D04 /* dng_reference.cpp */,
+				26D6F3C00F371FCD00B96D04 /* dng_reference.h */,
+				26D6F3C10F371FCD00B96D04 /* dng_render.cpp */,
+				26D6F3C20F371FCD00B96D04 /* dng_render.h */,
+				26D6F3C30F371FCD00B96D04 /* dng_resample.cpp */,
+				26D6F3C40F371FCD00B96D04 /* dng_resample.h */,
+				26D6F3C50F371FCD00B96D04 /* dng_sdk_limits.h */,
+				26D6F3C60F371FCD00B96D04 /* dng_shared.cpp */,
+				26D6F3C70F371FCD00B96D04 /* dng_shared.h */,
+				26D6F3C80F371FCD00B96D04 /* dng_simple_image.cpp */,
+				26D6F3C90F371FCD00B96D04 /* dng_simple_image.h */,
+				26D6F3CA0F371FCD00B96D04 /* dng_spline.cpp */,
+				26D6F3CB0F371FCD00B96D04 /* dng_spline.h */,
+				26D6F3CC0F371FCD00B96D04 /* dng_stream.cpp */,
+				26D6F3CD0F371FCD00B96D04 /* dng_stream.h */,
+				26D6F3CE0F371FCD00B96D04 /* dng_string.cpp */,
+				26D6F3CF0F371FCD00B96D04 /* dng_string.h */,
+				26D6F3D00F371FCD00B96D04 /* dng_string_list.cpp */,
+				26D6F3D10F371FCD00B96D04 /* dng_string_list.h */,
+				26D6F3D20F371FCD00B96D04 /* dng_tag_codes.h */,
+				26D6F3D30F371FCD00B96D04 /* dng_tag_types.cpp */,
+				26D6F3D40F371FCD00B96D04 /* dng_tag_types.h */,
+				26D6F3D50F371FCD00B96D04 /* dng_tag_values.h */,
+				26D6F3D60F371FCD00B96D04 /* dng_temperature.cpp */,
+				26D6F3D70F371FCD00B96D04 /* dng_temperature.h */,
+				26D6F3D80F371FCD00B96D04 /* dng_tile_iterator.cpp */,
+				26D6F3D90F371FCD00B96D04 /* dng_tile_iterator.h */,
+				26D6F3DA0F371FCD00B96D04 /* dng_tone_curve.cpp */,
+				26D6F3DB0F371FCD00B96D04 /* dng_tone_curve.h */,
+				26D6F3DC0F371FCD00B96D04 /* dng_types.h */,
+				26D6F3DD0F371FCD00B96D04 /* dng_utils.cpp */,
+				26D6F3DE0F371FCD00B96D04 /* dng_utils.h */,
+				26D6F3DF0F371FCD00B96D04 /* dng_xmp.cpp */,
+				26D6F3E00F371FCD00B96D04 /* dng_xmp.h */,
+				26D6F3E10F371FCD00B96D04 /* dng_xmp_sdk.cpp */,
+				26D6F3E20F371FCD00B96D04 /* dng_xmp_sdk.h */,
+				26D6F3E30F371FCD00B96D04 /* dng_xy_coord.cpp */,
+				26D6F3E40F371FCD00B96D04 /* dng_xy_coord.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		1AB674ADFE9D54B511CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8DD76F6C0486A84900D96B5E /* dcpTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6859E8C029090F304C91782 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				C6859E8B029090EE04C91782 /* dcpTool.1 */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8DD76F620486A84900D96B5E /* dcpTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "dcpTool" */;
+			buildPhases = (
+				8DD76F640486A84900D96B5E /* Sources */,
+				8DD76F660486A84900D96B5E /* Frameworks */,
+				8DD76F690486A84900D96B5E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dcpTool;
+			productInstallPath = "$(HOME)/bin";
+			productName = dcpTool;
+			productReference = 8DD76F6C0486A84900D96B5E /* dcpTool */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1220;
+			};
+			buildConfigurationList = 1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "dcpTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				Base,
+				en,
+				fr,
+				de,
+				ja,
+			);
+			mainGroup = 08FB7794FE84155DC02AAC07 /* dcpTool */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DD76F620486A84900D96B5E /* dcpTool */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8DD76F640486A84900D96B5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26D6F3E50F371FCD00B96D04 /* dng_1d_function.cpp in Sources */,
+				26D6F3E60F371FCD00B96D04 /* dng_1d_table.cpp in Sources */,
+				26D6F3E70F371FCD00B96D04 /* dng_abort_sniffer.cpp in Sources */,
+				26D6F3E80F371FCD00B96D04 /* dng_area_task.cpp in Sources */,
+				26D6F3E90F371FCD00B96D04 /* dng_bottlenecks.cpp in Sources */,
+				26D6F3EA0F371FCD00B96D04 /* dng_camera_profile.cpp in Sources */,
+				26D6F3EB0F371FCD00B96D04 /* dng_color_space.cpp in Sources */,
+				26D6F3EC0F371FCD00B96D04 /* dng_color_spec.cpp in Sources */,
+				26D6F3ED0F371FCD00B96D04 /* dng_date_time.cpp in Sources */,
+				26D6F3EE0F371FCD00B96D04 /* dng_exceptions.cpp in Sources */,
+				26D6F3EF0F371FCD00B96D04 /* dng_exif.cpp in Sources */,
+				26D6F3F00F371FCD00B96D04 /* dng_file_stream.cpp in Sources */,
+				26D6F3F10F371FCD00B96D04 /* dng_filter_task.cpp in Sources */,
+				26D6F3F20F371FCD00B96D04 /* dng_fingerprint.cpp in Sources */,
+				26D6F3F30F371FCD00B96D04 /* dng_globals.cpp in Sources */,
+				26D6F3F40F371FCD00B96D04 /* dng_host.cpp in Sources */,
+				2632AC681D0845D500FA507A /* dng_safe_arithmetic.cpp in Sources */,
+				26D6F3F50F371FCD00B96D04 /* dng_hue_sat_map.cpp in Sources */,
+				26D6F3F60F371FCD00B96D04 /* dng_ifd.cpp in Sources */,
+				26D6F3F70F371FCD00B96D04 /* dng_image.cpp in Sources */,
+				26D6F3F80F371FCD00B96D04 /* dng_image_writer.cpp in Sources */,
+				26D6F3F90F371FCD00B96D04 /* dng_info.cpp in Sources */,
+				26D6F3FA0F371FCD00B96D04 /* dng_iptc.cpp in Sources */,
+				26D6F3FB0F371FCD00B96D04 /* dng_linearization_info.cpp in Sources */,
+				26D6F3FC0F371FCD00B96D04 /* dng_lossless_jpeg.cpp in Sources */,
+				26D6F3FD0F371FCD00B96D04 /* dng_matrix.cpp in Sources */,
+				26D6F3FE0F371FCD00B96D04 /* dng_memory.cpp in Sources */,
+				26D6F3FF0F371FCD00B96D04 /* dng_memory_stream.cpp in Sources */,
+				26D6F4000F371FCD00B96D04 /* dng_mosaic_info.cpp in Sources */,
+				26D6F4010F371FCD00B96D04 /* dng_mutex.cpp in Sources */,
+				26D6F4020F371FCD00B96D04 /* dng_negative.cpp in Sources */,
+				26D6F4030F371FCD00B96D04 /* dng_orientation.cpp in Sources */,
+				26D6F4040F371FCD00B96D04 /* dng_parse_utils.cpp in Sources */,
+				26D6F4050F371FCD00B96D04 /* dng_pixel_buffer.cpp in Sources */,
+				26D6F4060F371FCD00B96D04 /* dng_point.cpp in Sources */,
+				26D6F4070F371FCD00B96D04 /* dng_preview.cpp in Sources */,
+				26D6F4080F371FCD00B96D04 /* dng_pthread.cpp in Sources */,
+				26D6F4090F371FCD00B96D04 /* dng_rational.cpp in Sources */,
+				26D6F40A0F371FCD00B96D04 /* dng_read_image.cpp in Sources */,
+				26D6F40B0F371FCD00B96D04 /* dng_rect.cpp in Sources */,
+				26D6F40C0F371FCD00B96D04 /* dng_reference.cpp in Sources */,
+				26D6F40D0F371FCD00B96D04 /* dng_render.cpp in Sources */,
+				26D6F40E0F371FCD00B96D04 /* dng_resample.cpp in Sources */,
+				26D6F40F0F371FCD00B96D04 /* dng_shared.cpp in Sources */,
+				26D6F4100F371FCD00B96D04 /* dng_simple_image.cpp in Sources */,
+				26D6F4110F371FCD00B96D04 /* dng_spline.cpp in Sources */,
+				26D6F4120F371FCD00B96D04 /* dng_stream.cpp in Sources */,
+				26D6F4130F371FCD00B96D04 /* dng_string.cpp in Sources */,
+				26D6F4140F371FCD00B96D04 /* dng_string_list.cpp in Sources */,
+				26D6F4150F371FCD00B96D04 /* dng_tag_types.cpp in Sources */,
+				26D6F4160F371FCD00B96D04 /* dng_temperature.cpp in Sources */,
+				26D6F4170F371FCD00B96D04 /* dng_tile_iterator.cpp in Sources */,
+				26D6F4180F371FCD00B96D04 /* dng_tone_curve.cpp in Sources */,
+				26D6F4190F371FCD00B96D04 /* dng_utils.cpp in Sources */,
+				26D6F41A0F371FCD00B96D04 /* dng_xmp.cpp in Sources */,
+				26D6F41B0F371FCD00B96D04 /* dng_xmp_sdk.cpp in Sources */,
+				26D6F41C0F371FCD00B96D04 /* dng_xy_coord.cpp in Sources */,
+				26D6F6030F375E8C00B96D04 /* xml_camera_profile.cpp in Sources */,
+				26B99E640F397B9A00F1AE94 /* main.cpp in Sources */,
+				2632AC671D0845D500FA507A /* dng_big_table.cpp in Sources */,
+				26CD3020103709F20050ECDF /* dng_bad_pixels.cpp in Sources */,
+				26CD3021103709F20050ECDF /* dng_gain_map.cpp in Sources */,
+				26CD3022103709F20050ECDF /* dng_lens_correction.cpp in Sources */,
+				26CD3023103709F20050ECDF /* dng_misc_opcodes.cpp in Sources */,
+				26CD3024103709F20050ECDF /* dng_opcode_list.cpp in Sources */,
+				26CD3025103709F20050ECDF /* dng_opcodes.cpp in Sources */,
+				2613A3D3166B6F410056285A /* dng_jpeg_image.cpp in Sources */,
+				2613A3D4166B6F410056285A /* dng_ref_counted_block.cpp in Sources */,
+				2632AC691D0845D500FA507A /* dng_local_string.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB923208733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qDNGUseStdInt=1",
+					"qWinOS=0",
+					"qMacOS=1",
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+					"qDNGXMPDocOps=0",
+					"qDNGXMPFiles=0",
+					"PCDMAGIC_FIXES=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					XMPStub/include,
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = dcpTool;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		1DEB923308733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qDNGUseStdInt=1",
+					"qWinOS=0",
+					"qMacOS=1",
+					"qDNGReportErrors=1",
+					"qDNGXMPDocOps=0",
+					"qDNGXMPFiles=0",
+					"PCDMAGIC_FIXES=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					/usr/include/libxml2,
+					XMPStub/include,
+				);
+				INSTALL_PATH = /usr/local/bin;
+				LIBRARY_SEARCH_PATHS = "";
+				PRODUCT_NAME = dcpTool;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		1DEB923608733DC60010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qWinOS=0",
+					"qMacOS=1",
+					"qDNGReportErrors=1",
+					"qDNGXMPDocOps=0",
+					"PCDMAGIC_FIXES=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lz",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		1DEB923708733DC60010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"qWinOS=0",
+					"qMacOS=1",
+					"qDNGReportErrors=1",
+					"qDNGXMPDocOps=0",
+					"PCDMAGIC_FIXES=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = (
+					"-lxml2",
+					"-lz",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB923108733DC60010E9CD /* Build configuration list for PBXNativeTarget "dcpTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923208733DC60010E9CD /* Debug */,
+				1DEB923308733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB923508733DC60010E9CD /* Build configuration list for PBXProject "dcpTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB923608733DC60010E9CD /* Debug */,
+				1DEB923708733DC60010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

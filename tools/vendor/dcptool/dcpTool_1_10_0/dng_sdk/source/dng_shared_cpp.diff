@@ -1,0 +1,6 @@
+1082,1084d1081
+< #if defined(PCDMAGIC_FIXES)
+<         if ((magicNumber != magicExtendedProfile) && (magicNumber != magicTIFF))
+< #else
+1086d1082
+< #endif

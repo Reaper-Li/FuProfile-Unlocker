@@ -1,0 +1,40 @@
+# Local Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local build and generated output
+build/
+dist/
+transport/
+release/
+reports/
+generated/
+/*.spec
+/*.zip
+/*.sha256.txt
+
+# The RAW corpus is reproducible from its manifest and is never committed.
+RAW/*
+!RAW/README.md
+!RAW/manifest.json
+
+# Keep only the third-party material required to build and comply with licenses.
+tools/vendor/*.zip
+tools/vendor/fujifilm-camera-profiles/FujifilmCameraProfiles-master/cube lut/
+tools/vendor/fujifilm-camera-profiles/FujifilmCameraProfiles-master/dcp examples/
+tools/vendor/fujifilm-camera-profiles/FujifilmCameraProfiles-master/png lut/
+tools/vendor/fujifilm-camera-profiles/FujifilmCameraProfiles-master/provia conversion luts/
+tools/vendor/fujifilm-camera-profiles/FujifilmCameraProfiles-master/xmp_profile.png
+tools/vendor/dcptool/dcpTool_1_10_0/Documentation/Example_files/
+**/xcuserdata/
+
+# Operating-system and editor files
+.DS_Store
+__MACOSX/
+Thumbs.db
+.idea/
+.vscode/
