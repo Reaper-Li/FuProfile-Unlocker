@@ -1,5 +1,13 @@
 # FuProfile Unlocker v0.2.7
 
+## Windows asset refresh — 2026-09-17
+
+The Windows ZIP was rebuilt in place to fix intermittent `dcpTool` crashes with
+exit code `0xC0000142` when profile generation was started from the windowed
+application. The Windows build now launches bundled command-line tools with an
+independent hidden console. The application version and macOS asset are
+unchanged.
+
 This release adds a complete English interface while preserving the existing
 Simplified Chinese experience. Profile generation and camera compatibility are
 unchanged from v0.2.6.

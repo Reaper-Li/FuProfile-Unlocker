@@ -255,6 +255,19 @@ def sha256(path: Path) -> str:
 
 
 def run(command: list[str]) -> subprocess.CompletedProcess[str]:
+    if os.name == "nt":
+        # The bundled dcpTool is a console application. When it is launched
+        # directly from PyInstaller's windowed executable, its legacy runtime
+        # can intermittently fail DLL initialization with 0xC0000142. Give it
+        # an independent hidden console so the runtime initializes reliably
+        # without flashing a terminal window for the user.
+        startupinfo = subprocess.STARTUPINFO()
+        startupinfo.dwFlags |= subprocess.STARTF_USESHOWWINDOW
+        startupinfo.wShowWindow = subprocess.SW_HIDE
+        return subprocess.run(
+            command, check=True, capture_output=True, text=True,
+            startupinfo=startupinfo, creationflags=subprocess.CREATE_NEW_CONSOLE,
+        )
     return subprocess.run(command, check=True, capture_output=True, text=True)
 
 
