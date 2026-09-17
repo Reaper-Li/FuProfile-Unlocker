@@ -370,7 +370,7 @@ class ProfileUnlockerApp:
     def nav_item(self, parent: tk.Frame, text: str, page: str) -> tk.Canvas:
         c = self.colors
         active = self.page == page
-        width = 142 if self.language == "en" else 112
+        width = 158 if self.language == "en" else 112
         canvas = tk.Canvas(
             parent, width=width, height=42,
             background=c["surface"], highlightthickness=0,
@@ -410,6 +410,14 @@ class ProfileUnlockerApp:
             highlightbackground=c["border"],
         )
         upload.pack(fill="x")
+        # Reserve the fixed-width action first. On macOS/Tk 9, packing the
+        # expanding copy area first can consume the row and clip the English
+        # button at the right edge.
+        self.choose_button = CanvasButton(
+            upload, "选择 RAW", self.choose_raw, c, width=150, height=46, kind="primary",
+        )
+        self.choose_button.pack(side="right", padx=(18, 0))
+        self.choose_button.set_disabled(self.busy)
         upload_left = tk.Frame(upload, background=c["surface"])
         upload_left.pack(side="left", fill="both", expand=True)
         icon = tk.Canvas(upload_left, width=48, height=48, background=c["surface"], highlightthickness=0)
@@ -420,11 +428,6 @@ class ProfileUnlockerApp:
         copy.pack(side="left", fill="both", expand=True)
         self.label(copy, "选择或拖入一张非富士 RAW", 15, c["text"], "bold", anchor="w").pack(fill="x", pady=(2, 3))
         self.label(copy, "拖放到此区域；支持常见 RAW 格式，全程在本机处理", 11, c["text_secondary"], anchor="w").pack(fill="x")
-        self.choose_button = CanvasButton(
-            upload, "选择 RAW", self.choose_raw, c, width=150, height=46, kind="primary",
-        )
-        self.choose_button.pack(side="right", padx=(18, 0))
-        self.choose_button.set_disabled(self.busy)
         self.drop_zone = upload
         self.register_drop_target(upload)
 
@@ -580,7 +583,8 @@ class ProfileUnlockerApp:
         all_button.set_disabled(not self.installations)
         self.label(
             actions, "卸载仅移除本软件管理的 DCP，不会影响照片或 Adobe 原始文件。",
-            10, c["text_muted"], anchor="w",
+            10, c["text_muted"], anchor="w", justify="left",
+            wraplength=390 if self.language == "en" else 430,
         ).pack(side="left", fill="x", expand=True)
 
     def installation_row(self, parent: tk.Frame, item: InstalledCamera, last: bool) -> tk.Frame:

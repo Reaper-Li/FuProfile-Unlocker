@@ -19,6 +19,9 @@ unchanged from v0.2.6.
 - Added an `EN / 中文` button in the header for immediate language switching.
 - Localized the install page, profile manager, drag-and-drop messages, progress
   states, errors, confirmation dialogs, file picker, and headless CLI mode.
+- Fixed macOS/Tk layout clipping in the English interface by reserving the
+  Choose RAW button before the expanding copy area, widening navigation items,
+  and wrapping the profile-manager safety note.
 - Added automated tests for locale normalization, environment overrides, exact
   translations, and dynamic status translations.
 - Kept RAW identification, Adobe Standard matching, DCP generation, verification,
@@ -39,4 +42,5 @@ unchanged from v0.2.6.
 - 中文系统默认显示中文，其他系统语言默认显示英文。
 - 标题栏新增 `EN / 中文` 按钮，可在运行时即时切换语言。
 - 首页、管理页、拖放提示、处理进度、错误信息、确认框、文件选择器及命令行模式均已完成本地化。
+- 修复 macOS/Tk 下英文界面的 Choose RAW 按钮挤出、导航文字裁切及管理页说明文字布局问题。
 - 相机匹配、DCP 生成、验证、安装与卸载逻辑未发生变化。
