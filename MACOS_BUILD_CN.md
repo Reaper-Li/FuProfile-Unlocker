@@ -1,6 +1,6 @@
 # macOS 构建与验证说明
 
-本文用于在 macOS 上从锁定的 v0.2.6 源码构建 FuProfile Unlocker `.app`。PyInstaller 不能从 Windows 交叉编译 macOS 应用，因此必须在真实 macOS 环境中完成。
+本文用于在 macOS 上从锁定的 v0.2.7 源码构建 FuProfile Unlocker `.app`。PyInstaller 不能从 Windows 交叉编译 macOS 应用，因此必须在真实 macOS 环境中完成。
 
 ## 一、环境要求
 
@@ -71,18 +71,19 @@ dist/FuProfile Unlocker.app
 
 ## 五、最低发布验证
 
-1. 双击或执行 `open "dist/FuProfile Unlocker.app"`，确认主窗口正常出现且显示 v0.2.6。
-2. 检查浅色/深色主题、图标、滚动与“管理与卸载”页面。
-3. 分别使用按钮和拖放方式选择一张传统相机 RAW。
-4. 确认应用能找到本机 Adobe Standard，并生成 8 个 DCP。
-5. 确认配置安装到：
+1. 双击或执行 `open "dist/FuProfile Unlocker.app"`，确认主窗口正常出现且显示 v0.2.7。
+2. 确认英文系统默认显示英文，并用标题栏 `中文 / EN` 按钮往返切换，检查两种语言均完整显示。
+3. 检查两种语言下的浅色/深色主题、图标、滚动与“管理与卸载”页面。
+4. 分别使用按钮和拖放方式选择一张传统相机 RAW。
+5. 确认应用能找到本机 Adobe Standard，并生成 8 个 DCP。
+6. 确认配置安装到：
    `~/Library/Application Support/Adobe/CameraRaw/CameraProfiles/FuProfile Unlocker/`。
-6. 重启 Lightroom，确认八个配置可见。
-7. 在管理页面验证单项卸载和选择卸载。
-8. 确认 `.app/Contents/Resources` 内包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
-9. 确认包内没有 Adobe Standard 或 Camera Matching DCP。
-10. 所有资源修改必须发生在最终签名与公证之前，否则签名会失效。
-11. 在最终压缩后把 SHA-256 加入 Release 的 `SHA256SUMS.txt`。
+7. 重启 Lightroom，确认八个配置可见。
+8. 在管理页面验证单项卸载和选择卸载。
+9. 确认 `.app/Contents/Resources` 内包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
+10. 确认包内没有 Adobe Standard 或 Camera Matching DCP。
+11. 所有资源修改必须发生在最终签名与公证之前，否则签名会失效。
+12. 在最终压缩后把 SHA-256 加入 Release 的 `SHA256SUMS.txt`。
 
 建议至少使用一张 Canon、Nikon 或 Sony RAW 完成端到端验证。不要把富士原生 RAW 或手机 DNG 作为首发验收样本。
 
@@ -93,9 +94,9 @@ macOS 应用建议使用 `ditto` 打包，以保留资源分叉和应用包结�
 ```sh
 ditto -c -k --sequesterRsrc --keepParent \
   "dist/FuProfile Unlocker.app" \
-  "dist/FuProfile Unlocker-macOS-arm64-v0.2.6.zip"
+  "dist/FuProfile Unlocker-macOS-arm64-v0.2.7.zip"
 
-shasum -a 256 "dist/FuProfile Unlocker-macOS-arm64-v0.2.6.zip"
+shasum -a 256 "dist/FuProfile Unlocker-macOS-arm64-v0.2.7.zip"
 ```
 
 ## 七、签名和公证

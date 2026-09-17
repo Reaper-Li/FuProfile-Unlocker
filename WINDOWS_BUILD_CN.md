@@ -1,6 +1,6 @@
 # Windows 编译与验证说明
 
-本文档用于在 Windows 10/11 x64 上从源码构建 FuProfile Unlocker v0.2.6。
+本文档用于在 Windows 10/11 x64 上从源码构建 FuProfile Unlocker v0.2.7。
 界面、DCP 生成逻辑和测试代码与 macOS 共用；Windows 仅使用不同的 Adobe
 目录、ExifTool 和 dcpTool 可执行文件。
 
@@ -58,7 +58,7 @@ Set-ExecutionPolicy -Scope Process Bypass
 
 ```text
 dist\FuProfile Unlocker\FuProfile Unlocker.exe
-dist\FuProfile Unlocker-Windows-x64-v0.2.6.zip
+dist\FuProfile Unlocker-Windows-x64-v0.2.7.zip
 ```
 
 如系统没有 `py` launcher，可手动执行：
@@ -77,22 +77,23 @@ $env:PYTHONPATH = "$PWD\src"
 建议至少执行以下检查：
 
 1. 双击 `dist\FuProfile Unlocker\FuProfile Unlocker.exe`。
-2. 确认浅色、深色主题下文字和按钮可读。
-3. 在“安装配置”中选择一张非富士 RAW。
-4. 确认软件正确显示品牌、型号，并生成八个 DCP。
-5. 确认文件写入：
+2. 确认中文系统默认显示简体中文，并用标题栏 `EN / 中文` 按钮往返切换，检查两种语言均完整显示。
+3. 确认两种语言在浅色、深色主题下文字和按钮可读。
+4. 在安装页面选择一张非富士 RAW。
+5. 确认软件正确显示品牌、型号，并生成八个 DCP。
+6. 确认文件写入：
 
 ```text
 %APPDATA%\Adobe\CameraRaw\CameraProfiles\FuProfile Unlocker\<相机型号>\
 ```
 
-6. 重启 Lightroom，在 Camera Matching 中确认八种风格。
-7. 在“管理与卸载”中测试单项、复选和全部卸载。
-8. 使用鼠标滚轮和触控板滚动卸载列表，并拖动右侧滚动条。
-9. 确认应用目录内包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
-10. 确认包内没有 Adobe Standard 或 Camera Matching DCP。
-11. 如使用代码签名证书，应先签署最终 EXE，再生成 ZIP 和校验值。
-12. 在生成 ZIP 后计算 SHA-256，并把结果加入 Release 的 `SHA256SUMS.txt`。
+7. 重启 Lightroom，在 Camera Matching 中确认八种风格。
+8. 在管理页面以英文和中文测试单项、复选和全部卸载。
+9. 使用鼠标滚轮和触控板滚动卸载列表，并拖动右侧滚动条。
+10. 确认应用目录内包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
+11. 确认包内没有 Adobe Standard 或 Camera Matching DCP。
+12. 如使用代码签名证书，应先签署最终 EXE，再生成 ZIP 和校验值。
+13. 在生成 ZIP 后计算 SHA-256，并把结果加入 Release 的 `SHA256SUMS.txt`。
 
 软件会在下列位置寻找 Adobe Standard：
 

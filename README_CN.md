@@ -6,10 +6,10 @@
 
 ## 下载
 
-请从 [GitHub Releases](../../releases) 下载正式发布文件。v0.2.6 应选择：
+请从 [GitHub Releases](../../releases) 下载正式发布文件。v0.2.7 应选择：
 
-- `FuProfile Unlocker-Windows-x64-v0.2.6.zip`：适用于 64 位 Windows。
-- `FuProfile Unlocker-macOS-arm64-v0.2.6.zip`：适用于 Apple Silicon Mac。
+- `FuProfile Unlocker-Windows-x64-v0.2.7.zip`：适用于 64 位 Windows。
+- `FuProfile Unlocker-macOS-arm64-v0.2.7.zip`：适用于 Apple Silicon Mac。
 - `SHA256SUMS.txt`：用于核验下载文件。
 
 电脑必须已经安装 Lightroom Classic 或 Adobe Camera Raw，并且其中包含所选相机的
@@ -20,6 +20,7 @@ Adobe Standard 配置。运行前请完整解压整个压缩包。首个公开�
 ## 功能
 
 - 提供 Windows x64 与 Apple Silicon macOS 应用包。
+- 提供英文与简体中文界面，默认跟随系统语言，并可在应用内即时切换。
 - Windows 打包、内置 dcpTool 选择、拖放操作和传统相机 DCP 生成已经通过端到端测试。
 - 两个平台共用相同的界面与配置生成核心。
 - 不内置任何 Adobe DCP 文件。

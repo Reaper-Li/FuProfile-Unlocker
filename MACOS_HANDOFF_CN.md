@@ -1,16 +1,16 @@
-# FuProfile Unlocker v0.2.6 macOS 构建交接说明
+# FuProfile Unlocker v0.2.7 macOS 构建交接说明
 
 本文供 macOS 构建人员使用。请只使用随本交接包提供的
-`FuProfile Unlocker-source-v0.2.6.zip`，不要使用此前保存的源码或 `.app`。
+`FuProfile Unlocker-source-v0.2.7.zip`，不要使用此前保存的源码或 `.app`。
 PyInstaller 不能在 Windows 上交叉编译 macOS 应用，因此最终 `.app` 必须在真实 Mac 上生成。
 
 ## 一、本次交接基线
 
 - 产品名称：`FuProfile Unlocker`
-- 源码版本：`0.2.6`
+- 源码版本：`0.2.7`
 - 目标产物：Apple Silicon（arm64）macOS 应用
 - Bundle ID：`org.fuprofileunlocker.app`
-- 最终文件名：`FuProfile Unlocker-macOS-arm64-v0.2.6.zip`
+- 最终文件名：`FuProfile Unlocker-macOS-arm64-v0.2.7.zip`
 - Python 包名已经正式改为 `fuprofile_unlocker`。
 - 构建环境变量使用 `FUPROFILE_EXIFTOOL`；不要再使用旧缩写。
 - 不需要保留或迁移任何早期应用名称、安装目录或内部模块名。
@@ -23,14 +23,14 @@ README 中的 554 个型号是使用现有 RAW 样本完成验证的测试覆盖
 
 交接目录应至少包含：
 
-- `FuProfile Unlocker-source-v0.2.6.zip`
+- `FuProfile Unlocker-source-v0.2.7.zip`
 - `MACOS_HANDOFF_CN.md`
 - `SHA256SUMS.txt`
 
 在 Terminal 中进入交接目录并核验源码包：
 
 ```sh
-shasum -a 256 "FuProfile Unlocker-source-v0.2.6.zip"
+shasum -a 256 "FuProfile Unlocker-source-v0.2.7.zip"
 cat SHA256SUMS.txt
 ```
 
@@ -69,10 +69,10 @@ Python 环境中构建本次 arm64 发布包。
 
 ```sh
 ditto -x -k \
-  "FuProfile Unlocker-source-v0.2.6.zip" \
-  "FuProfile Unlocker-source-v0.2.6-unpacked"
+  "FuProfile Unlocker-source-v0.2.7.zip" \
+  "FuProfile Unlocker-source-v0.2.7-unpacked"
 
-cd "FuProfile Unlocker-source-v0.2.6-unpacked/FuProfile Unlocker-source-v0.2.6"
+cd "FuProfile Unlocker-source-v0.2.7-unpacked/FuProfile Unlocker-source-v0.2.7"
 
 chmod +x tools/vendor/dcptool/dcpTool_1_10_0/Binaries/macOS/dcpTool
 chmod +x tools/download_raw_samples.sh
@@ -93,7 +93,7 @@ export FUPROFILE_EXIFTOOL="$(command -v exiftool)"
 .venv/bin/python -m unittest discover -s tests -v
 ```
 
-应有 16 项测试全部通过。随后构建：
+应有 22 项测试全部通过。随后构建：
 
 ```sh
 .venv/bin/python packaging/build_app.py
@@ -116,22 +116,23 @@ file "dist/FuProfile Unlocker.app/Contents/MacOS/FuProfile Unlocker"
 codesign --verify --deep --strict --verbose=2 "dist/FuProfile Unlocker.app"
 ```
 
-预期 Bundle ID 为 `org.fuprofileunlocker.app`、版本为 `0.2.6`，主程序架构包含 `arm64`。
+预期 Bundle ID 为 `org.fuprofileunlocker.app`、版本为 `0.2.7`，主程序架构包含 `arm64`。
 
 ## 六、发布验收
 
 请在真实 Lightroom/Camera Raw 环境中完成以下检查：
 
-1. 双击应用，确认窗口名称和界面内名称均为 `FuProfile Unlocker`，版本为 `v0.2.6`。
-2. 验证浅色与深色外观、应用图标、滚动和“管理与卸载”页面。
-3. 使用按钮选择一张已验证列表内的传统相机 RAW，确认识别成功。
-4. 再使用拖放方式选择 RAW，确认拖放逻辑正常。
-5. 生成八个 DCP，确认全部通过应用内验证并安装到：
+1. 双击应用，确认窗口名称和界面内名称均为 `FuProfile Unlocker`，版本为 `v0.2.7`。
+2. 在英文系统语言下启动，确认默认显示英文；点击 `中文` 后确认完整切换为简体中文，再点击 `EN` 切回英文。
+3. 验证两种语言下的浅色与深色外观、应用图标、滚动和“管理与卸载”页面。
+4. 使用按钮选择一张已验证列表内的传统相机 RAW，确认识别成功。
+5. 再使用拖放方式选择 RAW，确认拖放逻辑正常。
+6. 生成八个 DCP，确认英文进度与完成信息正确，且全部通过应用内验证并安装到：
    `~/Library/Application Support/Adobe/CameraRaw/CameraProfiles/FuProfile Unlocker/`。
-6. 重启 Lightroom，确认八个配置可见且可以应用。
-7. 在管理页面验证单项卸载和选择卸载。
-8. 确认应用资源中包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
-9. 确认 `.app` 内没有任何 Adobe Standard、Adobe Camera Matching 或其他 `.dcp` 文件：
+7. 重启 Lightroom，确认八个配置可见且可以应用。
+8. 在管理页面验证英文与中文的单项卸载和选择卸载。
+9. 确认应用资源中包含 `LICENSE`、`THIRD_PARTY_NOTICES.md` 和 `licenses/`。
+10. 确认 `.app` 内没有任何 Adobe Standard、Adobe Camera Matching 或其他 `.dcp` 文件：
 
 ```sh
 find "dist/FuProfile Unlocker.app" -type f -iname '*.dcp' -print
@@ -146,9 +147,9 @@ find "dist/FuProfile Unlocker.app" -type f -iname '*.dcp' -print
 ```sh
 ditto -c -k --sequesterRsrc --keepParent \
   "dist/FuProfile Unlocker.app" \
-  "dist/FuProfile Unlocker-macOS-arm64-v0.2.6.zip"
+  "dist/FuProfile Unlocker-macOS-arm64-v0.2.7.zip"
 
-shasum -a 256 "dist/FuProfile Unlocker-macOS-arm64-v0.2.6.zip"
+shasum -a 256 "dist/FuProfile Unlocker-macOS-arm64-v0.2.7.zip"
 ```
 
 如果有 Apple Developer ID，请在压缩前完成正式签名、公证和 stapling；任何资源修改都必须
@@ -159,7 +160,7 @@ shasum -a 256 "dist/FuProfile Unlocker-macOS-arm64-v0.2.6.zip"
 
 请回传：
 
-- `FuProfile Unlocker-macOS-arm64-v0.2.6.zip`
+- `FuProfile Unlocker-macOS-arm64-v0.2.7.zip`
 - 该 ZIP 的 SHA-256
 - 单元测试通过结果
 - macOS 版本、Mac 芯片、Python 版本和 ExifTool 版本

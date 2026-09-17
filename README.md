@@ -6,10 +6,10 @@ A free desktop utility that creates eight Fujifilm-look Camera Matching DCP prof
 
 ## Downloads
 
-Download published builds from [GitHub Releases](../../releases). For v0.2.6, choose:
+Download published builds from [GitHub Releases](../../releases). For v0.2.7, choose:
 
-- `FuProfile Unlocker-Windows-x64-v0.2.6.zip` for 64-bit Windows.
-- `FuProfile Unlocker-macOS-arm64-v0.2.6.zip` for Apple Silicon macOS.
+- `FuProfile Unlocker-Windows-x64-v0.2.7.zip` for 64-bit Windows.
+- `FuProfile Unlocker-macOS-arm64-v0.2.7.zip` for Apple Silicon macOS.
 - `SHA256SUMS.txt` to verify the downloaded archive.
 
 Lightroom Classic or Adobe Camera Raw must already be installed, including an Adobe Standard
@@ -21,6 +21,7 @@ Only download release files from this repository and verify their SHA-256 values
 ## Features
 
 - Provides Windows x64 and Apple Silicon macOS application bundles.
+- Provides English and Simplified Chinese interfaces, follows the system language, and includes an in-app language switch.
 - Windows packaging, bundled dcpTool selection, drag-and-drop, and traditional-camera DCP generation are tested end to end.
 - The interface and profile-generation core are shared across both platforms.
 - No Adobe DCP file is bundled.

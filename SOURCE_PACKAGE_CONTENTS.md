@@ -1,6 +1,6 @@
 # 源码包内容
 
-此统一归档用于构建和验证锁定的 FuProfile Unlocker v0.2.6 Windows 与 macOS 版本。
+此统一归档用于构建和验证锁定的 FuProfile Unlocker v0.2.7 Windows 与 macOS 版本。
 
 包含：
 

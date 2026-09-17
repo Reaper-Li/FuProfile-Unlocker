@@ -13,6 +13,7 @@ from tkinterdnd2 import COPY, DND_FILES, REFUSE_DROP, TkinterDnD
 
 from . import __version__
 from .core import STYLES, SUPPORTED_EXTENSIONS, generate_and_install
+from .i18n import detect_language, set_language, translate
 from .installations import InstalledCamera, scan_installations, uninstall_many
 from .platforms import find_app_icon
 from .theme import detect_theme, palette
@@ -103,7 +104,7 @@ class CanvasButton(tk.Canvas):
             bd=0,
             cursor=interactive_cursor(),
         )
-        self.button_text = text
+        self.button_text = translate(text)
         self.command = command
         self.colors = colors
         self.kind = kind
@@ -185,7 +186,7 @@ class ConfirmDialog:
         self.result = False
         window = tk.Toplevel(parent)
         self.window = window
-        window.title(title)
+        window.title(translate(title))
         window.configure(background=colors["surface"])
         window.resizable(False, False)
         window.transient(parent)
@@ -198,11 +199,11 @@ class ConfirmDialog:
         content = tk.Frame(window, background=colors["surface"], padx=28, pady=26)
         content.pack(fill="both", expand=True)
         tk.Label(
-            content, text=title, background=colors["surface"], foreground=colors["text"],
+            content, text=translate(title), background=colors["surface"], foreground=colors["text"],
             font=(font_family(), 18, "bold"), anchor="w",
         ).pack(fill="x")
         tk.Label(
-            content, text=message, background=colors["surface"], foreground=colors["text_secondary"],
+            content, text=translate(message), background=colors["surface"], foreground=colors["text_secondary"],
             font=(font_family(), 12), justify="left", anchor="w", wraplength=380,
         ).pack(fill="x", pady=(12, 24))
         actions = tk.Frame(content, background=colors["surface"])
@@ -227,6 +228,8 @@ class ConfirmDialog:
 class ProfileUnlockerApp:
     def __init__(self, root: tk.Tk) -> None:
         self.root = root
+        self.language = detect_language()
+        set_language(self.language)
         self.events: queue.Queue[tuple[str, object]] = queue.Queue()
         self.theme_name = detect_theme()
         self.colors = palette(self.theme_name)
@@ -306,7 +309,7 @@ class ProfileUnlockerApp:
     ) -> tk.Label:
         return tk.Label(
             parent,
-            text=text,
+            text=translate(text),
             font=(font_family(), size, weight),
             background=str(parent.cget("background")),
             foreground=color,
@@ -357,18 +360,26 @@ class ProfileUnlockerApp:
         navigation.pack(side="right", pady=16)
         self.nav_item(navigation, "安装配置", "install").pack(side="left", padx=(0, 6))
         self.nav_item(navigation, "管理与卸载", "manage").pack(side="left")
+        language_button = CanvasButton(
+            inner, "EN" if self.language == "zh" else "中文",
+            self.toggle_language, c, width=62, height=38, kind="ghost", font_size=10,
+        )
+        language_button.pack(side="right", padx=(0, 10), pady=18)
+        language_button.set_disabled(self.busy)
 
     def nav_item(self, parent: tk.Frame, text: str, page: str) -> tk.Canvas:
         c = self.colors
         active = self.page == page
+        width = 142 if self.language == "en" else 112
         canvas = tk.Canvas(
-            parent, width=112, height=42, background=c["surface"], highlightthickness=0,
+            parent, width=width, height=42,
+            background=c["surface"], highlightthickness=0,
             cursor="arrow" if active else interactive_cursor(),
         )
         fill = c["accent_soft"] if active else c["surface"]
-        rounded_rectangle(canvas, 1, 1, 111, 41, 11, fill=fill, outline=fill)
+        rounded_rectangle(canvas, 1, 1, width - 1, 41, 11, fill=fill, outline=fill)
         canvas.create_text(
-            56, 21, text=text, fill=c["accent_text"] if active else c["text_secondary"],
+            width / 2, 21, text=translate(text), fill=c["accent_text"] if active else c["text_secondary"],
             font=(font_family(), 12, "bold" if active else "normal"),
         )
         if not active:
@@ -441,7 +452,7 @@ class ProfileUnlockerApp:
             status_copy, self.status_text, 12, c["text"], "bold", anchor="w",
         )
         self.status_title_label.pack(fill="x")
-        detail = self.status_detail
+        detail = translate(self.status_detail)
         if self.current_filename:
             detail = f"{self.current_filename}  ·  {detail}"
         self.status_detail_label = self.label(
@@ -549,7 +560,7 @@ class ProfileUnlockerApp:
             notice = tk.Frame(parent, background=notice_bg, padx=12, pady=8)
             notice.pack(fill="x", pady=(10, 0))
             self.label(
-                notice, f"{self.status_text}  ·  {self.status_detail}",
+                notice, f"{translate(self.status_text)}  ·  {translate(self.status_detail)}",
                 10, notice_fg, "bold", anchor="w",
             ).pack(fill="x")
 
@@ -557,13 +568,13 @@ class ProfileUnlockerApp:
         actions.pack(fill="x", pady=(14, 0))
         selected_button = CanvasButton(
             actions, "卸载所选", self.uninstall_selected, c,
-            width=132, height=44, kind="danger", font_size=11,
+            width=150, height=44, kind="danger", font_size=11,
         )
         selected_button.pack(side="right", padx=(10, 0))
         selected_button.set_disabled(not self.selected_installations)
         all_button = CanvasButton(
             actions, "全部卸载", self.uninstall_all, c,
-            width=120, height=44, kind="secondary", font_size=11,
+            width=126, height=44, kind="secondary", font_size=11,
         )
         all_button.pack(side="right")
         all_button.set_disabled(not self.installations)
@@ -620,6 +631,14 @@ class ProfileUnlockerApp:
 
     def switch_page(self, page: str) -> None:
         self.page = page
+        self.build_ui()
+
+    def toggle_language(self) -> None:
+        if self.busy:
+            return
+        self.language = "en" if self.language == "zh" else "zh"
+        os.environ["FUPROFILE_LANGUAGE"] = self.language
+        set_language(self.language)
         self.build_ui()
 
     def _on_mousewheel(self, event: tk.Event) -> None:
@@ -681,7 +700,10 @@ class ProfileUnlockerApp:
         canvas.yview_moveto(max(0.0, min(1.0 - visible, self.scroll_drag_view + content_delta)))
 
     def choose_raw(self) -> None:
-        selected = filedialog.askopenfilename(title="选择 RAW 照片", filetypes=RAW_TYPES)
+        selected = filedialog.askopenfilename(
+            title=translate("选择 RAW 照片"),
+            filetypes=[(translate(name), pattern) for name, pattern in RAW_TYPES],
+        )
         if not selected:
             return
         self.start_generation(Path(selected))
@@ -770,7 +792,7 @@ class ProfileUnlockerApp:
             while True:
                 event, payload = self.events.get_nowait()
                 if event == "status":
-                    self.status_text = str(payload).rstrip("……")
+                    self.status_text = str(payload)
                     self.status_detail = "正在安全处理配置文件，请不要退出软件。"
                     changed = True
                 elif event == "done":
